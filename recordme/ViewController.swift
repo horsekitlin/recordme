@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var broadcastButton: UIButton!
     
-    static let kBroadcastExtensionBundleId = "com.tomaslin.recordme.recordme.broadcast"
+    static let kBroadcastExtensionBundleId = "com.tomas.recordme.broadcast"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
                                                                    height: 80))
         pickerView.translatesAutoresizingMaskIntoConstraints = false
         pickerView.preferredExtension = ViewController.kBroadcastExtensionBundleId
-
+        pickerView.showsMicrophoneButton = false
         // Theme the picker view to match the white that we want.
         if let button = pickerView.subviews.first as? UIButton {
             button.imageView?.tintColor = UIColor.white
